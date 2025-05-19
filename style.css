@@ -70,6 +70,15 @@ img {
 .row {
     text-align: center;
 }
+/*Page 3*/
+#page3 {
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+    gap: 20px; /* Adjust spacing between items */
+    padding: 20px;
+    text-align: center;
+}
 /* Page 4*/
 #page4 {
     height: 800px;
