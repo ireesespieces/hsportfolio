@@ -97,3 +97,19 @@ img {
     width: 50px;
     height: 50px;
 }
+#page5{
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+    gap: 20px; /* Adjust spacing between items */
+    padding: 20px;
+    text-align: center; 
+}
+#page6{
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+    gap: 20px; /* Adjust spacing between items */
+    padding: 20px;
+    text-align: center; 
+}
