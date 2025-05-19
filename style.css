@@ -97,19 +97,75 @@ img {
     width: 50px;
     height: 50px;
 }
-#page5{
-    height: 800px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* three columns */
-    gap: 20px; /* Adjust spacing between items */
-    padding: 20px;
-    text-align: center; 
-}
 #page6{
     height: 800px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* three columns */
     gap: 20px; /* Adjust spacing between items */
     padding: 20px;
     text-align: center; 
 }
+
+/* still needs to changed */
+#page5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: black;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    height: 600px;
+    gap: 30px;
+  }
+  .left-column {
+    flex: 1;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .extracurricular-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.3rem;
+    line-height: 2.2;
+  }
+  .extracurricular-list li {
+    padding-left: 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .extracurricular-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4fc3f7;
+    font-size: 1.5rem;
+    line-height: 1;
+    top: 0.3rem;
+  }
+  .extracurricular-list li:hover {
+    color: #a5d8ff;
+  }
+  .right-column {
+    flex: 1;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  canvas {
+    max-width: 100%;
+    max-height: 100%;
+  }
