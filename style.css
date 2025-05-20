@@ -44,6 +44,8 @@ img {
     /*justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
     text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;    
 }
 .hypel{
     width: 50px;
@@ -70,14 +72,13 @@ img {
 .row {
     text-align: center;
 }
-/*Page 3*/
-#page3 {
+/*Page 3 */
+  #page3 {
     height: 800px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* three columns */
-    gap: 20px; /* Adjust spacing between items */
     padding: 20px;
     text-align: center;
+    align-items: center;
 }
 /* Page 4*/
 #page4 {
@@ -103,69 +104,225 @@ img {
     gap: 20px; /* Adjust spacing between items */
     padding: 20px;
     text-align: center; 
+    margin-left: 150px;
+    margin-right: 150px; 
 }
 
-/* still needs to changed */
 #page5 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 40px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: black;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .container {
-    display: flex;
-    width: 90%;
-    max-width: 1000px;
-    height: 600px;
-    gap: 30px;
-  }
-  .left-column {
-    flex: 1;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  .extracurricular-list {
-    list-style: none;
-    padding-left: 0;
-    font-size: 1.3rem;
-    line-height: 2.2;
-  }
-  .extracurricular-list li {
-    padding-left: 1rem;
+      font-family: "DM Sans", serif;
+      margin: 40px 0;
+      color: #222;
+      display: flex;
+      align-items: flex-start; /* Align items to the start */
+      justify-content: center;
+      height: auto; /* Allow height to adjust based on content */
+      padding: 20px; /* Add padding for spacing */
+    }
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1000px;
+      height: 100%;
+      gap: 30px;
+    }
+    .left-column {
+      flex: 1;
+      border-radius: 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .extracurricular-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.3rem;
+      line-height: 2.2;
+    }
+    .extracurricular-list li {
+      padding-left: 0;
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      color: #222;
+      user-select: none;
+    }
+    .extracurricular-list li:hover {
+      color: #8a94cc;
+    }
+    .right-column {
+      flex: 1;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    canvas {
+      max-width: 100%;
+      max-height: 100%;
+    }
+/* page3 */
+    .cont {
+      display: flex;
+      max-width: 1000px;
+      width: 90%;
+      overflow: hidden;
+      margin: auto;
+    }
+    .left,
+    .right {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* For .left: center content; for .right: center horizontally */
+      padding: 20px 30px;
+      gap: 20px;
+      min-width: 0;
+      min-height: 0;
+      box-sizing: border-box;
+    }
+
+    .left img {
+      width: 350px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      height: auto;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .left img:hover {
+      transform: scale(1.05);
+    }
+
+    .right h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .right p {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    @media (max-width: 700px) {
+      .cont {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+      }
+      .left,
+      .right {
+        padding: 15px;
+        width: 100%;
+        min-width: 0;
+      }
+      .left img {
+        height: 100px;
+        width: auto;
+      }
+      .right h1 {
+        font-size: 2rem;
+      }
+    }
+    /* Timeline container */
+  .timeline {
     position: relative;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
   }
-  .extracurricular-list li::before {
-    content: "•";
+  /* The vertical timeline line */
+  .timeline::before {
+    content: '';
     position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #a3b9d2;
+    border-radius: 2px;
+  }
+  /* Individual timeline items */
+  .timeline-item {
+    position: relative;
+    background: rgb(208, 208, 249);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px 30px 20px 100px;
+    margin-bottom: 40px;
+    width: 45%;
+  }
+  /* Odd items on left, even on right */
+  .timeline-item:nth-child(odd) {
     left: 0;
-    color: #4fc3f7;
-    font-size: 1.5rem;
-    line-height: 1;
-    top: 0.3rem;
   }
-  .extracurricular-list li:hover {
-    color: #a5d8ff;
+  .timeline-item:nth-child(even) {
+    left: 55%;
   }
-  .right-column {
-    flex: 1;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
+  /* Circles on timeline line */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    border: 4px solid #a3b9d2;
+    border-radius: 50%;
+    z-index: 1;
   }
-  canvas {
-    max-width: 100%;
-    max-height: 100%;
+  .timeline-item:nth-child(odd)::before {
+    left: -44px;
   }
+  .timeline-item:nth-child(even)::before {
+    right: -44px;
+  }
+
+  /* Text content */
+  .certificate-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: #111;
+  }
+  .certificate-issuer {
+    font-size: 1rem;
+    margin: 0 0 8px;
+    color: #555;
+  }
+  .certificate-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 12px;
+  }
+  /* Responsive for small screens */
+  @media (max-width: 800px) {
+    .timeline::before {
+      left: 20px;
+    }
+    .timeline-item,
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd) {
+      width: 100%;
+      left: 0 !important;
+      padding-left: 90px;
+      padding-right: 20px;
+      margin-bottom: 30px;
+    }
+    .timeline-item::before {
+      left: 0 !important;
+      right: auto !important;
+    }
+  }
+

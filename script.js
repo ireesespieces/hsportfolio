@@ -1,27 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
       const categories = ["academic", "personal", "physical", "spiritual", "social"];
-      
-      // Define extracurricular activities with their points per category here
+
       const extracurriculars = [
         {
           name: "Swim",
-          points: {academic: 0, personal: 2, physical: 5, spiritual: 0, social: 4}
+          points: { academic: 0, personal: 2, physical: 5, spiritual: 0, social: 4 }
         },
         {
           name: "CSF",
-          points: {academic: 5, personal: 3, physical: 0, spiritual: 0, social: 2}
+          points: { academic: 5, personal: 3, physical: 0, spiritual: 0, social: 2 }
         },
         {
           name: "Church Co-Worker",
-          points: {academic: 0, personal: 2, physical: 0, spiritual: 5, social: 4}
+          points: { academic: 0, personal: 2, physical: 0, spiritual: 5, social: 4 }
         },
         {
           name: "Photography and Videography",
-          points: {academic: 0, personal: 4, physical: 0, spiritual: 0, social: 4}
+          points: { academic: 0, personal: 4, physical: 0, spiritual: 0, social: 4 }
+        },
+        {
+          name: "MCL Internship (incoming)",
+          points: { academic: 5, personal: 3, physical: 0, spiritual: 0, social: 4 }
+        },
+        {
+          name: "Logos Seminary Internship (incoming)",
+          points: { academic: 3, personal: 4, physical: 0, spiritual: 2, social: 4 }
+        },
+        {
+          name: "SkillsUSA",
+          points: { academic: 4, personal: 3, physical: 0, spiritual: 0, social: 4 }
         },
       ];
 
-      // Calculate total points by summing by category across all extracurriculars
       function calculateTotalPoints() {
         let totals = {};
         categories.forEach(cat => { totals[cat] = 0; });
@@ -33,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return totals;
       }
 
-      // Initial radar data shows total points
       let dataPoints = calculateTotalPoints();
+
       const ctx = document.getElementById('radarChart').getContext('2d');
       let radarChart = new Chart(ctx, {
         type: 'radar',
@@ -46,30 +56,30 @@ document.addEventListener("DOMContentLoaded", function () {
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 2,
-            pointBackgroundColor: 'rgba(54, 162, 235, 1)'
+            pointBackgroundColor: 'rgba(54, 162, 235, 1)',
           }]
         },
         options: {
           scales: {
             r: {
               beginAtZero: true,
-              max: 15,
+              max: 30,
               ticks: {
                 stepSize: 3,
-                color: '#ffffff'
+                color: '#222'
               },
               grid: {
-                color: 'rgba(255,255,255,0.2)'
+                color: 'rgba(0,0,0,0.1)'
               },
               angleLines: {
-                color: 'rgba(255,255,255,0.3)'
+                color: 'rgba(0,0,0,0.2)'
               },
               pointLabels: {
-                color: '#ffffff',
+                color: '#222',
                 font: {
                   size: 14,
                   weight: 'bold',
-                  family: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif'
+                  family: '"DM Sans", serif'
                 }
               }
             }
@@ -77,9 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
           plugins: {
             legend: {
               labels: {
-                color: 'white',
+                color: '#222',
                 font: {
-                  size: 16
+                  size: 16,
+                  family: '"DM Sans", serif'
                 }
               }
             }
@@ -89,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Populate extracurriculars list and add hover handlers
       const listEl = document.getElementById('extracurricularList');
       extracurriculars.forEach((ex) => {
         const li = document.createElement('li');

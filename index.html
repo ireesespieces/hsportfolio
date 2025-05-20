@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="script.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +26,7 @@
           </div>
           <div>
             <p>
-              I’m an incoming high school senior interested in majoring in Computer Engineering. I bring a strong background in cybersecurity, IT, leadership, and web development. 
-              <br> My expertise is in Windows and Windows Server. In leadership roles as President of SkillsUSA and Treasurer of the Cyber Assurance Team, 
-              <br> I have overseen finances, organized events, and supported teammates to achieve goals. 
-              <br> I also have hands-on experience in WordPress development, website optimization, and SEO. Beyond tech, I’m also passionate about cinematography and photography, with a portfolio showcasing my work. 
-              <br> I also enjoy hardware projects and prototyping.  <!-- Recently I’ve b a 16-key marcopad with a rotary encoder using the Arduino microcontroller and a right hand indicator for a paralyzed driver. -->
+              I’m an incoming high school senior in the CTE Computer Science Pathway at Glen A. Wilson High School. I’m on my schools’ Cyber Assurance Team, California Scholarship Federation, and SkillsUSA Team. I bring a strong background in cybersecurity, information technology, leadership, and web development. In leadership roles as President of SkillsUSA chapter and Treasurer of Cyber Assurance Team, I have overseen finances, organized events, and supported teammates to achieve team goals. Beyond tech, I’m also passionate about cinematography and photography, with a portfolio showcasing my work, from sports to individual portraits. I also enjoy prototyping and creating hardware projects.
             </p>
           </div>
         <br>
@@ -50,9 +47,17 @@
       <br id="anc3">
       <h2> About Me</h2>
       <div id =page3>
-        <p>
-          
-        </p>
+        <div class="cont">
+          <div class="left">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczM5UJxXdDDqk2F3FwjzwLbJjkVHKLKibEy0_eTkOhWpIeZWvDW4eeM0f-ET3DcUcXuK_Boh2fnJXTx89YIvIqgzroaGV4JsqXa6j5uSCd0ZMUQBy8g=w2400">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczM5UJxXdDDqk2F3FwjzwLbJjkVHKLKibEy0_eTkOhWpIeZWvDW4eeM0f-ET3DcUcXuK_Boh2fnJXTx89YIvIqgzroaGV4JsqXa6j5uSCd0ZMUQBy8g=w2400">
+          </div>
+          <div class="right">
+            <p>
+              Ever since I got my first laptop in 3rd grade, I became very interested in the world of computers and what it has to offer. I loved to explore what the websites had to offer. While other people would only use the features that others taught, I would explore all the features the site had to offer. I really started to get into computer hardware when my dad built a computer in 2020. A year later, I was inspired to also build my own computer.  At Glen A. Wilson High School, I’ve taken the AP Computer Sciences and Cybersecurity, as well as Intro to Engineering Design. At Rio Hondo, I have taken Intro to Digital Photography and at Cerritos College I will be taking Intro to Computer Information Systems. This led me to want to major in Computer Engineering. I’ve also started a few projects, such as my right-hand indicator and 16 key macropad. The right-hand indicator was made for my friend, who got into a motorcycle accident and paralyzed his left arm. This way, he would be able to safely hit the turn signal instead of reaching his whole hand over the steering wheel. In the future, I hope to go to a 4 year college and also get a Masters in Computer Engineering. 
+            </p>
+          </div>
+        </div>
       </div>
       <br id="anc1">
       <h2>My Skills</h2>
@@ -120,26 +125,59 @@
             </ul>
           </div>
           <div class="right-column">
-            <canvas id="radarChart" width="600" height="600"></canvas>
+            <canvas id="radarChart" width="900" height="900"></canvas>
           </div>
         </div>
       </div>
       <h2>Reflection</H2>
       <div id="page6">
-        <p>
-          Throughout high school, I've been lucky to be in the Computer Science CTE pathway. 
-        </p>
+        <div class="cont">
+          <div class="left">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczM5UJxXdDDqk2F3FwjzwLbJjkVHKLKibEy0_eTkOhWpIeZWvDW4eeM0f-ET3DcUcXuK_Boh2fnJXTx89YIvIqgzroaGV4JsqXa6j5uSCd0ZMUQBy8g=w2400">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczM5UJxXdDDqk2F3FwjzwLbJjkVHKLKibEy0_eTkOhWpIeZWvDW4eeM0f-ET3DcUcXuK_Boh2fnJXTx89YIvIqgzroaGV4JsqXa6j5uSCd0ZMUQBy8g=w2400">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczM5UJxXdDDqk2F3FwjzwLbJjkVHKLKibEy0_eTkOhWpIeZWvDW4eeM0f-ET3DcUcXuK_Boh2fnJXTx89YIvIqgzroaGV4JsqXa6j5uSCd0ZMUQBy8g=w2400">
+          </div>
+          <div class="right">
+            <p>
+          These past few years at Wilson, I’ve learned about programming, cybersecurity, and engineering. From coming in as a freshman having very basic programming to being a junior and learning 3 programming languages have been extremely helpful for me and my problem solving skills. I’ve experienced tremendous growth both personally and academically. Whether it was competing at SkillsUSA or Cyber competitions or developing my creative skills in CAD and video editing, I’ve become much more confident in my ability to take initiative and adapt quickly. I have two favorite memories. First, I competed at SkillsUSA Nationals in Georgia, being one of the top people in IT Services has shown me how much potential I had, but also how much potential still lies ahead. Second was when I was able to go to the FBI Forensic Lab in freshman year. That opened my eyes in letting me understand that high school was able to open a lot of new opportunities. 
+          <br><br>
+          Looking forward, I’m excited to continue pushing my limits in both technology and media. I hope to further develop my programming skills, engineering skills, and continue gaining my CompTIA certifications. I’m aiming to get a masters degree in Computer Engineering and I hope to be able to pursue and bring my skills to something related to computer hardware. 
+          </p>
+          </div>
+        </div>
       </div>
       <h2>Achievements</h2>
       <div>
-        <ul>  
-          <li>CompTIA A+ Certifcate (Jan 2025)</li>
-          <li>First Place SkillsUSA States (Apr 2024)</li>
-          <li>Second Place SkillsUSA States (Apr 2025)</li>
-          <li>First Place SkillsUSA Regionals (Feb 2024) </li>
-          <li>First Place SkillsUSA Regionals (Feb 2025) </li>
-          <li>Dr. Joseph Chang Technology/Engineering Scholarship (May 2022)</li>
-        </ul>
-      </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <p class="certficate-issuer"> Dr. Joseph Chang</p>
+            <p class="certificate-title" >Dr. Joseph Chang Technology/Engineering Scholarship</p>
+            <p class="certficate-date">MAY 2022</p>
+          </div>
+          <div class="timeline-item">
+             <p class="certficate-issuer"> SkillsUSA</p>
+            <p class="certificate-title">First Place SkillsUSA Regionals</p>
+            <p class="certficate-date"> FEB 2024</p>
+          </div>
+          <div class="timeline-item">
+            <p class="certficate-issuer"> SkillsUSA</p>
+            <p class="certificate-title">First Place SkillsUSA States</p>
+            <p class="certficate-date">APR 2024</p>
+          </div>
+          <div class="timeline-item">
+            <p class="certficate-issuer"> CompTIA</p>
+            <p class="certificate-title" >CompTIA A+ Certification</p>
+            <p class="certficate-date">JAN 2025</p>
+          </div>
+          <div class="timeline-item">
+            <p class="certficate-issuer"> SkillsUSA</p>
+            <p class="certificate-title" >First Place SkillsUSA Regionals</p>
+            <p class="certficate-date">FEB 2025</p>
+          </div>
+          <div class="timeline-item">
+            <p class="certficate-issuer"> SkillsUSA</p>
+            <p class="certificate-title" >Second Place SkillsUSA States</p>
+            <p class="certficate-date">APR 2025</p>
+          </div>
       </body>
 </html>
